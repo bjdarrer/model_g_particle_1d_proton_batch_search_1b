@@ -24,7 +24,7 @@ model_g_particle_1d_proton_batc…
 
 Download it here:
 
-model_g_particle_1d_proton_batch_search_1b_step.py
+_step.py
 
 What I changed:
 
@@ -67,11 +67,11 @@ extra explanatory comments so you can follow the flow more easily.
 
 Typical use
 -----------
-python3 model_g_particle_1d_proton_batch_search_1b.py
+python3 model_g_particle_1d_proton_batch_search_1b_step
 
 Faster smoke test
 -----------------
-python3 model_g_particle_1d_proton_batch_search_1b.py --nx 41 --tfinal 6 --dy 9.5,10.5,12 --b 27,28,29
+python3 model_g_particle_1d_proton_batch_search_1b_step --nx 41 --tfinal 6 --dy 9.5,10.5,12 --b 27,28,29
 
 Note to Brendan (not necessarily others):
 python3 -m venv tf-env
@@ -141,7 +141,7 @@ python3 model_g_particle_1d_proton_batch_search_1b_step.py
 or for the same quick sweep I used:
 
 python3 model_g_particle_1d_proton_batch_search_1b_step.py \
-  --outdir ./model_g_proton_batch_search_quick_1b \
+  --outdir ./model_g_proton_batch_search_quick_1b_step \
   --nx 41 --tfinal 6 \
   --dy 9.5,10.5,12.0 \
   --b 27,28,29 \
