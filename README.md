@@ -47,7 +47,8 @@ Note to Brendan (not necessarily others):
 
     source tf-env/bin/activate
 
-==================
+..............
+
 "The best next step is for me to turn your GUI code into a non-GUI batch search script that automatically
 
 scores each run against a Kelly-style proton target profile and writes out the top candidate parameter 
@@ -154,3 +155,4 @@ Best candidate profiles NPZ
 The main thing to check is whether the best candidate really gives you the kind of single broad positive proton-like core you want, rather than a more neutron-like or overly oscillatory profile in the SQK substrate language.
 
 Once you’ve had a look, send me your impressions and I’ll help you do the next refinement pass.
+......................
