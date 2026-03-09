@@ -37,7 +37,7 @@ annotated the main solver flow, Kelly target construction, scoring, and output w
 kept the code runnable
 
 kept the safer local output default:
---outdir ./model_g_proton_batch_search_out_1b
+--outdir ./model_g_proton_batch_search_out_1b_step
 
 I also checked that the annotated file still compiles cleanly as Python.
 
@@ -67,11 +67,11 @@ extra explanatory comments so you can follow the flow more easily.
 
 Typical use
 -----------
-python3 model_g_particle_1d_proton_batch_search_1b_step
+python3 model_g_particle_1d_proton_batch_search_1b_step.py
 
 Faster smoke test
 -----------------
-python3 model_g_particle_1d_proton_batch_search_1b_step --nx 41 --tfinal 6 --dy 9.5,10.5,12 --b 27,28,29
+python3 model_g_particle_1d_proton_batch_search_1b_step.py --nx 41 --tfinal 6 --dy 9.5,10.5,12 --b 27,28,29
 
 Note to Brendan (not necessarily others):
 python3 -m venv tf-env
