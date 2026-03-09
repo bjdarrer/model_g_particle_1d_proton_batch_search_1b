@@ -41,7 +41,8 @@ kept the safer local output default:
 
 I also checked that the annotated file still compiles cleanly as Python.
 
-If you like, I can next do a second pass where I make the comments even more beginner-friendly, line by line, inside the rhs() equations and the main() scan loop.
+If you like, I can next do a second pass where I make the comments even more beginner-friendly, 
+line by line, inside the rhs() equations and the main() scan loop.
 *********************
 
 ............
@@ -77,7 +78,9 @@ Note to Brendan (not necessarily others):
 python3 -m venv tf-env
 source tf-env/bin/activate
 ==================
-"The best next step is for me to turn your GUI code into a non-GUI batch search script that automatically scores each run against a Kelly-style proton target profile and writes out the top candidate parameter sets." Yes, thanks. Can you do this?
+"The best next step is for me to turn your GUI code into a non-GUI batch search script that automatically 
+scores each run against a Kelly-style proton target profile and writes out the top candidate parameter 
+sets." Yes, thanks. Can you do this?
 
 ChatGPT 5.4:
 
@@ -132,7 +135,8 @@ Qproxy_int_pYdx = 0.164173...
 
 polarity = positive-polarity (proton-like)
 
-One caveat: that run was intentionally coarse (nx=41, Tfinal=6) just to get a fast first pass, so this is a provisional best candidate, not yet a high-resolution final fit.
+One caveat: that run was intentionally coarse (nx=41, Tfinal=6) just to get a fast first pass, so 
+this is a provisional best candidate, not yet a high-resolution final fit.
 
 You can run the script like this:
 
@@ -151,7 +155,8 @@ python3 model_g_particle_1d_proton_batch_search_1b_step.py \
   --st 1.5 \
   --Tseed 3.0
 
-The natural next step is a second-stage refinement around that neighbourhood with a finer grid and longer runtime.
+The natural next step is a second-stage refinement around that neighbourhood with a finer grid and 
+longer runtime.
 
 Brendan: Thank you ChatGPT! I'll be very interested to review work you've just done!!
 
@@ -175,7 +180,9 @@ Batch search script
 
 Best candidate profiles NPZ
 
-The main thing to check is whether the best candidate really gives you the kind of single broad positive proton-like core you want, rather than a more neutron-like or overly oscillatory profile in the SQK substrate language.
+The main thing to check is whether the best candidate really gives you the kind of single broad 
+positive proton-like core you want, rather than a more neutron-like or overly oscillatory profile 
+in the SQK substrate language.
 
 Once you’ve had a look, send me your impressions and I’ll help you do the next refinement pass.
 ==================
