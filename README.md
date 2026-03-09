@@ -113,11 +113,11 @@ One caveat: that run was intentionally coarse (nx=41, Tfinal=6) just to get a fa
 
 You can run the script like this:
 
-python3 /mnt/data/model_g_particle_1d_proton_batch_search_1b.py
+python3 model_g_particle_1d_proton_batch_search_1b.py
 
 or for the same quick sweep I used:
 
-python3 /mnt/data/model_g_particle_1d_proton_batch_search_1b.py \
+python3 model_g_particle_1d_proton_batch_search_1b.py \
   --outdir /mnt/data/model_g_proton_batch_search_quick_1b \
   --nx 41 --tfinal 6 \
   --dy 9.5,10.5,12.0 \
