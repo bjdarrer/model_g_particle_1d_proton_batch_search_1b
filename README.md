@@ -118,7 +118,7 @@ python3 model_g_particle_1d_proton_batch_search_1b.py
 or for the same quick sweep I used:
 
 python3 model_g_particle_1d_proton_batch_search_1b.py \
-  --outdir /mnt/data/model_g_proton_batch_search_quick_1b \
+  --outdir ./model_g_proton_batch_search_quick_1b \
   --nx 41 --tfinal 6 \
   --dy 9.5,10.5,12.0 \
   --b 27,28,29 \
