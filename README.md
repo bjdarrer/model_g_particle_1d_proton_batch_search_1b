@@ -37,7 +37,7 @@ Typical use
 
 -----------
 
-python3 model_g_particle_1d_proton_batch_search_1b.py
+  python3 model_g_particle_1d_proton_batch_search_1b.py
 
 Faster smoke test
 
