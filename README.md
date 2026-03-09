@@ -33,23 +33,19 @@ What it does
    charge-density units.
 4) Writes CSV rankings and a PNG comparing the best SQK candidate with the target.
 
-Typical use
-
------------
+Typical use:
 
   python3 model_g_particle_1d_proton_batch_search_1b.py
 
 Faster smoke test
 
------------------
-
-python3 model_g_particle_1d_proton_batch_search_1b.py --nx 41 --tfinal 6 --dy 9.5,10.5,12 --b 27,28,29
+  python3 model_g_particle_1d_proton_batch_search_1b.py --nx 41 --tfinal 6 --dy 9.5,10.5,12 --b 27,28,29
 
 Note to Brendan (not necessarily others):
 
-python3 -m venv tf-env
+  python3 -m venv tf-env
 
-source tf-env/bin/activate
+  source tf-env/bin/activate
 
 ==================
 "The best next step is for me to turn your GUI code into a non-GUI batch search script that automatically
