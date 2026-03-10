@@ -77,27 +77,18 @@ writes ranked candidate parameter sets to CSV
 From the quick coarse run I did, the current best provisional proton-like candidate was:
 
 dy = 12.0
-
 b = 29.0
-
 g = 0.09
-
 amp = 1.0
-
 sx = 1.0
-
 st = 1.5
-
 Tseed = 3.0
-
 sign = -1
 
 with:
 
 pY_core = 0.288756...
-
 Qproxy_int_pYdx = 0.164173...
-
 polarity = positive-polarity (proton-like)
 
 One caveat: that run was intentionally coarse (nx=41, Tfinal=6) just to get a fast first pass, so this is 
