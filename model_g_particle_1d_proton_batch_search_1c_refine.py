@@ -175,27 +175,18 @@ summary_Brendan's_1st_run
 I then did an apples-to-apples refinement around that neighborhood at the same nx=51, Tfinal=8.0, narrowing only dy, b, g while keeping the other best values fixed. The best refined candidate came out as:
 
 dy = 10.25
-
 b = 29.5
-
 g = 0.085
-
 amp = 1.1
-
 sx = 1.0
-
 st = 1.5
-
 Tseed = 3.0
 
 with:
 
 score_total = 0.1489749375
-
 pY_core = 0.0276505435
-
 Qproxy_int_pYdx = 0.0321787323
-
 pY_fwhm_abs = 0.8
 
 So it is a small but genuine improvement over your first run.
@@ -217,9 +208,7 @@ Raw-scale comparison PNG
 The new 1c script is set up for a heavier refinement pass by default, with:
 
 nx = 81
-
 Tfinal = 12
-
 nframes = 60
 
 narrower stage-2 scan ranges around your best neighborhood
@@ -231,9 +220,7 @@ python3 model_g_particle_1d_proton_batch_search_1c_refine.py
 My reading of the trend so far is that the proton-like fit is nudging toward:
 
 slightly lower dy
-
 slightly higher b
-
 slightly lower g
 
 relative to your first-run best.
