@@ -152,7 +152,99 @@ proton-like core you want, rather than a more neutron-like or overly oscillatory
 substrate language.
 
 Once you’ve had a look, send me your impressions and I’ll help you do the next refinement pass.
+
+=================
+Updated part:
+
+From above you wrote: "The natural next step is a second-stage refinement around that neighbourhood 
+with a finer grid and longer runtime." Yes, can you do that? I attach the results I got from running 
+the code as it is set up "summary_Brendan's_1st_run.txt" and "model_g_proton_batch_search_out_1b.mp4", 
+with "best_candidate_vs_kelly_proton_Brendan's_1st_run.png". Its very interesting search tool. Very 
+clever! This image is what it shows on my GUI for the parameters you found. Obviously the y-axis is 
+0.006 not 1.0, so in the MP4 video it is too small to see towards the middel and end.
+Thought for 13m 32s
+
+Yes — I did a second-stage light refinement around your first-run best point, and I also made a refined 1c script for a heavier follow-up on your machine.
+
+Your first run’s best candidate was
+dy=10.5, b=29.0, g=0.09, amp=1.1, sx=1.0, st=1.5, Tseed=3.0
+with score_total = 0.1514599346, at nx=51 and Tfinal=8.0. 
+
+summary_Brendan's_1st_run
+
+I then did an apples-to-apples refinement around that neighborhood at the same nx=51, Tfinal=8.0, narrowing only dy, b, g while keeping the other best values fixed. The best refined candidate came out as:
+
+dy = 10.25
+
+b = 29.5
+
+g = 0.085
+
+amp = 1.1
+
+sx = 1.0
+
+st = 1.5
+
+Tseed = 3.0
+
+with:
+
+score_total = 0.1489749375
+
+pY_core = 0.0276505435
+
+Qproxy_int_pYdx = 0.0321787323
+
+pY_fwhm_abs = 0.8
+
+So it is a small but genuine improvement over your first run.
+
+Files:
+Refined 1c batch-search script
+Stage-2 light summary
+Stage-2 top candidates CSV
+Stage-2 all runs CSV
+Normalized best-vs-Kelly plot
+Raw-scale best-vs-Kelly plot
+Best candidate profiles NPZ
+
+About the y-axis issue you noticed: your observation is right. The original batch comparison plot is normalized on purpose. In the script, make_summary_plot() compares normalized(target_rho) with normalized(best_pY), and likewise for the mirrored surface profile, so the 1.0 peak is only for shape comparison, not raw SQK amplitude.
+
+That is why I added the extra raw-scale plot:
+Raw-scale comparison PNG
+
+The new 1c script is set up for a heavier refinement pass by default, with:
+
+nx = 81
+
+Tfinal = 12
+
+nframes = 60
+
+narrower stage-2 scan ranges around your best neighborhood
+
+You can run it simply as:
+
+python3 model_g_particle_1d_proton_batch_search_1c_refine.py
+
+My reading of the trend so far is that the proton-like fit is nudging toward:
+
+slightly lower dy
+
+slightly higher b
+
+slightly lower g
+
+relative to your first-run best.
+
+The next thing worth doing is to compare your GUI movie at
+dy=10.25, b=29.5, g=0.085, amp=1.1, sx=1.0, st=1.5, Tseed=3.0
+against the raw-scale plot, to see whether the central hump looks more proton-like to your eye as 
+well as to the score.
 ==================
+
+===============================
 """
 
 from __future__ import annotations
